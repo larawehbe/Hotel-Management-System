@@ -1,0 +1,298 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema hotel_db
+-- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `hotel_db` ;
+
+-- -----------------------------------------------------
+-- Schema hotel_db
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `hotel_db` DEFAULT CHARACTER SET utf8 ;
+USE `hotel_db` ;
+
+-- -----------------------------------------------------
+-- Table `hotel_db`.`Customer`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `hotel_db`.`Customer` ;
+
+CREATE TABLE IF NOT EXISTS `hotel_db`.`Customer` (
+  `CustomerID` INT NOT NULL AUTO_INCREMENT,
+  `FirstName` VARCHAR(45) NOT NULL,
+  `LastName` VARCHAR(45) NOT NULL,
+  `phone` VARCHAR(45)  NULL,
+  `city` VARCHAR(45) NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `pass` VARCHAR(45) NOT NULL,
+  `gender` CHAR(1) NOT NULL,
+  PRIMARY KEY (`CustomerID`))
+ENGINE = InnoDB;
+
+CREATE UNIQUE INDEX `CustomerID_UNIQUE` ON `hotel_db`.`Customer` (`CustomerID` ASC) VISIBLE;
+
+CREATE UNIQUE INDEX `username_UNIQUE` ON `hotel_db`.`Customer` (`username` ASC) VISIBLE;
+
+
+-- -----------------------------------------------------
+-- Table `hotel_db`.`Employee`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `hotel_db`.`Employee` ;
+
+CREATE TABLE IF NOT EXISTS `hotel_db`.`Employee` (
+  `EmployeeID` INT NOT NULL AUTO_INCREMENT,
+  `FirstName` VARCHAR(45) NOT NULL,
+  `LastName` VARCHAR(45) NOT NULL,
+  `Age` VARCHAR(45)  NULL,
+  `WorkHours` INT NOT NULL,
+  `phone` VARCHAR(45)  NULL,
+  `city` VARCHAR(45) NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `pass` VARCHAR(45) NOT NULL,
+  `birthdate` DATE NOT NULL,
+  `gender` VARCHAR(1) NOT NULL,
+  `FK_RoleID` INT NOT NULL,
+  `FK_HotelID` INT NOT NULL,
+  PRIMARY KEY (`EmployeeID`),
+  CONSTRAINT `fk_Employee_Role1`
+    FOREIGN KEY (`FK_RoleID`)
+    REFERENCES `hotel_db`.`Role` (`RoleID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Employee_Hotel1`
+    FOREIGN KEY (`FK_HotelID`)
+    REFERENCES `hotel_db`.`Hotel` (`HotelID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE UNIQUE INDEX `EmployeeID_UNIQUE` ON `hotel_db`.`Employee` (`EmployeeID` ASC) VISIBLE;
+
+CREATE UNIQUE INDEX `username_UNIQUE` ON `hotel_db`.`Employee` (`username` ASC) VISIBLE;
+
+CREATE INDEX `fk_Employee_Role1_idx` ON `hotel_db`.`Employee` (`FK_RoleID` ASC) VISIBLE;
+
+CREATE INDEX `fk_Employee_Hotel1_idx` ON `hotel_db`.`Employee` (`FK_HotelID` ASC) VISIBLE;
+
+
+-- -----------------------------------------------------
+-- Table `hotel_db`.`Hotel`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `hotel_db`.`Hotel` ;
+
+CREATE TABLE IF NOT EXISTS `hotel_db`.`Hotel` (
+  `HotelID` INT NOT NULL AUTO_INCREMENT,
+  `HotelName` VARCHAR(45) NOT NULL,
+  `phone` VARCHAR(45)  NOT NULL,
+  `Location` VARCHAR(45)  NULL,
+  PRIMARY KEY (`HotelID`)
+ 
+   
+);
+
+
+
+
+-- -----------------------------------------------------
+-- Table `hotel_db`.`Reservation`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `hotel_db`.`Reservation` ;
+
+CREATE TABLE IF NOT EXISTS `hotel_db`.`Reservation` (
+  `ReservationID` INT NOT NULL AUTO_INCREMENT,
+  `checkin` DATE NOT NULL,
+  `checkout` DATE NOT NULL,
+  `date` DATE NOT NULL,
+  `period` INT NULL,
+  `FK_RoomID` INT NOT NULL,
+  `FK_CustID` INT NOT NULL,
+  PRIMARY KEY (`ReservationID`),
+  CONSTRAINT `fk_Reservation_Customer`
+    FOREIGN KEY (`FK_CustID`)
+    REFERENCES `hotel_db`.`Customer` (`CustomerID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+    CONSTRAINT `fk_Reservation_Room`
+    FOREIGN KEY (`FK_RoomID`)
+    REFERENCES `hotel_db`.`Room` (`RoomID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION
+ );
+
+CREATE UNIQUE INDEX `ReservationID_UNIQUE` ON `hotel_db`.`Reservation` (`ReservationID` ASC) VISIBLE;
+
+CREATE INDEX `fk_Reservation_Customer_idx` ON `hotel_db`.`Reservation` (`FK_CustID` ASC) VISIBLE;
+
+
+-- -----------------------------------------------------
+-- Table `hotel_db`.`Role`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `hotel_db`.`Role` ;
+
+CREATE TABLE IF NOT EXISTS `hotel_db`.`Role` (
+  `RoleID` INT NOT NULL AUTO_INCREMENT,
+  `RoleName` VARCHAR(45) NOT NULL,
+  `Salary` VARCHAR(45)  NOT NULL,
+  PRIMARY KEY (`RoleID`));
+
+
+-- -----------------------------------------------------
+-- Table `hotel_db`.`RoomServices`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `hotel_db`.`RoomServices` ;
+
+CREATE TABLE IF NOT EXISTS `hotel_db`.`RoomServices` (
+  `FK_RoomID` INT NOT NULL,
+  `FK_ServiceID` INT NOT NULL,
+  `COST` VARCHAR(45),
+  PRIMARY KEY (`FK_RoomID`, `FK_ServiceID`),
+  CONSTRAINT `Rooms_FK_RoomID`
+    FOREIGN KEY (`FK_RoomID`)
+    REFERENCES `hotel_db`.`Rooms` (`RoomID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `Services_FK_ServiceID`
+    FOREIGN KEY (`FK_ServiceID`)
+    REFERENCES `hotel_db`.`Services` (`ServiceID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+
+
+-- -----------------------------------------------------
+-- Table `hotel_db`.`RoomType`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `hotel_db`.`RoomType` ;
+
+CREATE TABLE IF NOT EXISTS `hotel_db`.`RoomType` (
+  `RTypeID` INT NOT NULL AUTO_INCREMENT,
+  `category` VARCHAR(255) NOT NULL,
+  `Description` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`RTypeID`));
+
+
+-- -----------------------------------------------------
+-- Table `hotel_db`.`Rooms`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `hotel_db`.`Rooms` ;
+
+CREATE TABLE IF NOT EXISTS `hotel_db`.`Rooms` (
+  `RoomID` INT NOT NULL AUTO_INCREMENT,
+  `Rate` VARCHAR(45) NOT NULL ,
+  `RoomCost`  VARCHAR(45) NOT NULL,
+  `status` INT NOT NULL,
+ `FK_RTypeID` INT NOT NULL,
+  `features` VARCHAR(45)  NULL,
+  `NbOfBeds` INT NOT NULL,
+  `FK_HotelID` INT NOT NULL,
+  `Location` VARCHAR(45)  NOT NULL,
+  PRIMARY KEY (`RoomID`),
+  CONSTRAINT `fk_Rooms_Hotel1`
+    FOREIGN KEY (`FK_HotelID`)
+    REFERENCES `hotel_db`.`Hotel` (`HotelID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Rooms_RoomType1`
+    FOREIGN KEY (`FK_RTypeID`)
+    REFERENCES `hotel_db`.`RoomType` (`RTypeID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+CREATE INDEX `fk_Rooms_Hotel1_idx` ON `hotel_db`.`Rooms` (`FK_HotelID` ASC) VISIBLE;
+
+CREATE INDEX `fk_Rooms_RoomType1_idx` ON `hotel_db`.`Rooms` (`FK_RTypeID` ASC) VISIBLE;
+
+
+-- -----------------------------------------------------
+-- Table `hotel_db`.`Services`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `hotel_db`.`Services` ;
+
+CREATE TABLE IF NOT EXISTS `hotel_db`.`Services` (
+  `ServiceID` INT NOT NULL AUTO_INCREMENT,
+  `ServiceName` VARCHAR(45) NOT NULL,
+  `ServiceDesc` VARCHAR(45) NULL,
+  `ServiceCost` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`ServiceID`));
+
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+-------------------------------------------------------------------------------------
+-- INSERTING DATA   
+------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------Services Tbale-----------------------------------------------------
+INSERT INTO hotel_db.services VALUES ('1','Ironing','Iron Clothes/ cost is per piece','5' );
+INSERT INTO hotel_db.services VALUES ('2','Car Rental','Rent a car from a specific renting agent','40');
+INSERT INTO hotel_db.services VALUES ('3','Dry Cleaaning','Cleans a room at any time','5' );
+INSERT INTO hotel_db.services VALUES ('4','Laundry','Washes clothes / price per piece','5' );
+INSERT INTO hotel_db.services VALUES ('5','Shoe Shine','cleans the shoes','10');
+INSERT INTO hotel_db.services VALUES ('6','Valet Parking','Parks your car','5' );
+
+
+-------------------------------------------------RoomTypes---------------------------------------------------------------
+INSERT INTO hotel_db.roomtype VALUES('1','King','A room with a king-sized bed.');
+INSERT INTO hotel_db.roomtype VALUES('2','Queen','A room with with a Queen-sized bed.');
+INSERT INTO hotel_db.roomtype VALUES('3','Twin','A room with two twin beds.');
+INSERT INTO hotel_db.roomtype VALUES('4','Hollywood Twin','A room that can accomodate two persons with two twin beds joined together by a common headboard.');
+INSERT INTO hotel_db.roomtype VALUES('5','Studio','A room with a studio bed-a coach which can be converted into a bed. ');
+INSERT INTO hotel_db.roomtype VALUES('6','Suite','A parlour or living room connected to one or more bedrooms.(A room with one or more bedrooms and a separate living space.');
+
+
+-------------------------------------------Role-------------------------------------------------------------------------------
+INSERT INTO  hotel_db.role VALUES('1','manager','2000');
+INSERT INTO hotel_db.role VALUES('2','receptionist','1500');
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+-----------------------------------------Rooms-------------------------------------------------------------------
+INSERT INTO hotel_db.rooms VALUES ('1','5','100','1','1','feature1','2','1','101');
+INSERT INTO hotel_db.rooms VALUES ('2','5','120','1','2','feature12','4','1','102');
+INSERT INTO hotel_db.rooms VALUES ('3','4','115','0','3','feature13','5','1','203');
+INSERT INTO hotel_db.rooms VALUES ('4','3','70','0','4','feature14','1','1','404');
+INSERT INTO hotel_db.rooms VALUES ('5','1','30','1','1','feature15','1','1','121');
+INSERT INTO hotel_db.rooms VALUES ('6','1','30','1','1','feature16','1','1','121');
+INSERT INTO hotel_db.rooms VALUES ('7','1','40','1','1','feature17','2','1','124');
+INSERT INTO hotel_db.rooms VALUES ('8','1','35','1','1','feature18','2','1','105');
+INSERT INTO hotel_db.rooms VALUES ('9','1','30','1','1','feature19','2','1','107');
+----------------------------------------------------------------------------------------------------------------------------------
+
+----------------------------Hotel-------------------------------------------------------
+INSERT INTO hotel_db.Hotel VALUES ('1','NOUR LARA RAWAN','3456','SDFGHJH');
+
+
+-------------------------Employees----------------------------------------------------------------
+
+INSERT INTO hotel_db.employee VALUES('1','nour','fadel','22','10','70098765','Damour','nour','nour','1998-8-1','f','1','1');
+INSERT INTO hotel_db.employee VALUES('2','lara','wehbe','21','10','70123321','Beirut','lara','lara','1999-12-30','f','1','1');
+INSERT INTO hotel_db.employee VALUES('3','rawan','berjawi','20','10','71238765','Beirut','rawan','rawan','1999-3-10','f','1','1');
+INSERT INTO hotel_db.employee VALUES('4','shaza','fadel','19','12','78654345','tyre','shaza','shaza','2003-9-19','f','1','1');
+INSERT INTO hotel_db.employee VALUES('5','amir','fadel','23','12','71657839','DT','amir','amir','1996-8-26','m','1','1');
+INSERT INTO hotel_db.employee VALUES('6','mahdi','seyit','26','12','70456362','aramoun','mahdi','mahdi','1994-6-2','m','1','1');
+INSERT INTO hotel_db.employee VALUES('7','mohammad','seyit','30','12','7134391','Jeyyeh','mhmd','mhmd','1990-5-26','m','1','1');
+INSERT INTO hotel_db.employee VALUES('8','toni','yaackoub','35','12','71090839','DT','toni','toni','1985-2-1','m','1','1');
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+----------------------------------------------------------Customers----------------------------------------------------------------------------------
+
+INSERT INTO hotel_db.customer VALUES ('1','leya','farhat','78976567','Beirut','leya1','leya1','f');
+INSERT INTO hotel_db.customer VALUES ('2','rana','atwi','70109822','Damour','rana2','rana2','f');
+INSERT INTO hotel_db.customer VALUES ('3','rima','zahwi','78029361','Khalde','rima3','rima3','f');
+INSERT INTO hotel_db.customer VALUES ('4','ahmad','rammal','78012345','Beirut','ahmad4','ahmad4','m');
+INSERT INTO hotel_db.customer VALUES ('5','ali','mobarak','7018764','shayeh','ali5','ali5','m');
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------

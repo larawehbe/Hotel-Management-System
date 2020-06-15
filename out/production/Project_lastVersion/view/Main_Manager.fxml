@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="roomservices" prefHeight="458.0" prefWidth="492.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Main_Manager">
+   <children>
+      <Pane prefHeight="125.0" prefWidth="600.0" style="-fx-background-color: #c1c8e4;">
+         <children>
+            <Label layoutX="56.0" layoutY="50.0" prefHeight="81.0" prefWidth="333.0" text="Welcome " textFill="#2a1b3d">
+               <font>
+                  <Font name="Agency FB Bold" size="66.0" />
+               </font></Label>
+            <ImageView fitHeight="55.0" fitWidth="56.0" layoutX="524.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@13.jpeg" />
+               </image>
+            </ImageView>
+            <Button fx:id="logout" layoutX="489.0" layoutY="14.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="97.0" style="-fx-background-color: #c1c9e4;" text="Log Out" textFill="#2a1b3d">
+               <font>
+                  <Font name="Agency FB Bold" size="20.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Button fx:id="invoice" layoutX="420.0" layoutY="353.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: #c1c9e4;" text="Invoice" textFill="#2a1b3d">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="roomservice" layoutX="235.0" layoutY="353.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: #c1c9e4;" text="Room Services" textFill="#2a1b3d">    <font>
+         <Font name="Agency FB Bold" size="17.0" />
+      </font></Button>
+      <Button fx:id="roomtype" layoutX="235.0" layoutY="276.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: #c1c9e4;" text="Room Type" textFill="#2a1b3d">    <font>
+         <Font name="Agency FB Bold" size="20.0" />
+      </font></Button>
+      <Button fx:id="services" layoutX="420.0" layoutY="276.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: #c1c9e4;" text="Services" textFill="#2a1b3d">    <font>
+         <Font name="Agency FB Bold" size="20.0" />
+      </font></Button>
+      <Button fx:id="roles" layoutX="420.0" layoutY="201.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: #c1c9e4;" text="Roles" textFill="#2a1b3d"><font>
+         <Font name="Agency FB Bold" size="20.0" />
+      </font></Button>
+      <Button fx:id="reservation" layoutX="58.0" layoutY="353.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: #c1c9e4;" text="Reservation" textFill="#2a1b3d"><font>
+         <Font name="Agency FB Bold" size="20.0" />
+      </font></Button>
+      <Button fx:id="customer" layoutX="58.0" layoutY="276.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: #c1c9e4;" text="Customer" textFill="#2a1b3d">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font></Button>
+      <Button fx:id="employee" layoutX="58.0" layoutY="201.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: #c1c9e4;" text="Employee" textFill="#2a1b3d"><font>
+         <Font name="Agency FB Bold" size="20.0" />
+      </font></Button>
+      <Button fx:id="rooms" layoutX="235.0" layoutY="201.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: #c1c9e4;" text="Rooms" textFill="#2a1b3d"><font>
+         <Font name="Agency FB Bold" size="20.0" />
+      </font></Button>
+   </children>
+</AnchorPane>

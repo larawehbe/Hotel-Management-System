@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employee_controller.RoomServiceEmp">
+    <children>
+        <Button fx:id="back" layoutX="32.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Back" textFill="#2a1b3d">
+            <font>
+                <Font name="Agency FB Bold" size="20.0" />
+            </font>
+        </Button>
+        <TableView fx:id="table" layoutX="160.0" layoutY="50.0" prefHeight="202.0" prefWidth="235.0" style="-fx-background-color: #c1c9e4;">
+            <columns>
+                <TableColumn fx:id="roomid" prefWidth="75.0" text="Room ID" />
+                <TableColumn fx:id="serviceid" prefWidth="75.0" text="ServiceID" />
+                <TableColumn fx:id="cost" prefWidth="75.0" text="Service Cost" />
+            </columns>
+        </TableView>
+        <Button fx:id="delete" layoutX="243.0" layoutY="316.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Delete" textFill="#2a1b3d">
+            <font>
+                <Font name="Agency FB Bold" size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="add" layoutX="144.0" layoutY="316.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Add" textFill="#2a1b3d">
+            <font>
+                <Font name="Agency FB Bold" size="20.0" />
+            </font>
+        </Button>
+        <Button fx:id="update" layoutX="360.0" layoutY="316.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Update" textFill="#2a1b3d">
+            <font>
+                <Font name="Agency FB Bold" size="20.0" />
+            </font>
+        </Button>
+        <Label layoutX="161.0" layoutY="266.0" text="ID" textFill="#c1c8e4">
+            <font>
+                <Font name="Agency FB Bold" size="29.0" />
+            </font></Label>
+        <TextField fx:id="rid" layoutX="243.0" layoutY="271.0" promptText="Room Service ID" style="-fx-background-color: #c1c9e4;" />
+    </children>
+</AnchorPane>

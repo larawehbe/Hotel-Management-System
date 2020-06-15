@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="491.0" prefWidth="770.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.manager_addEmp">
+   <children>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="271.0" prefWidth="599.0">
+         <children>
+            <Label layoutX="14.0" layoutY="22.0" text="FirstName" textFill="#c1c8e4">
+               <font>
+                  <Font name="Agency FB Bold" size="29.0" />
+               </font></Label>
+            <Label layoutX="17.0" layoutY="61.0" text="LastName" textFill="#c1c8e4">
+               <font>
+                  <Font name="Agency FB Bold" size="29.0" />
+               </font></Label>
+            <Label layoutX="26.0" layoutY="105.0" text="Gender" textFill="#c1c8e4">
+               <font>
+                  <Font name="Agency FB Bold" size="29.0" />
+               </font></Label>
+            <Label layoutX="47.0" layoutY="138.0" text="Age" textFill="#c1c8e4">
+               <font>
+                  <Font name="Agency FB Bold" size="29.0" />
+               </font></Label>
+            <Label layoutX="20.0" layoutY="183.0" text="Birthday" textFill="#c1c8e4">
+               <font>
+                  <Font name="Agency FB Bold" size="29.0" />
+               </font></Label>
+            <TextField fx:id="fname" layoutX="136.0" layoutY="35.0" promptText="john" style="-fx-background-color: #c1c9e4;" />
+            <TextField fx:id="lname" layoutX="136.0" layoutY="75.0" promptText="john" style="-fx-background-color: #c1c9e4;" />
+            <TextField fx:id="gender" layoutX="136.0" layoutY="110.0" promptText="F/M" style="-fx-background-color: #c1c9e4;" />
+            <TextField fx:id="age" layoutX="136.0" layoutY="148.0" promptText="example : 21" style="-fx-background-color: #c1c9e4;" />
+            <DatePicker fx:id="bday" layoutX="136.0" layoutY="188.0" style="-fx-background-color: #c1c9e4;" />
+            <Label layoutX="476.0" layoutY="30.0" text="Phone" textFill="#c1c8e4">
+               <font>
+                  <Font name="Agency FB Bold" size="29.0" />
+               </font></Label>
+            <Label layoutX="487.0" layoutY="61.0" text="City" textFill="#c1c8e4">
+               <font>
+                  <Font name="Agency FB Bold" size="29.0" />
+               </font></Label>
+            <Label layoutX="464.0" layoutY="105.0" text="Workhours" textFill="#c1c8e4">
+               <font>
+                  <Font name="Agency FB Bold" size="29.0" />
+               </font></Label>
+            <Label layoutX="491.0" layoutY="143.0" text="Role ID" textFill="#c1c8e4">
+               <font>
+                  <Font name="Agency FB Bold" size="29.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="add_employee" layoutX="625.0" layoutY="214.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Add Employee" textFill="#2a1b3d">
+         <font>
+         <Font name="Agency FB Bold" size="20.0" />
+      </font>
+      </Button>
+      <TextField fx:id="workhours" layoutX="592.0" layoutY="110.0" promptText="example : 8" style="-fx-background-color: #c1c9e4;" />
+      <TextField fx:id="city" layoutX="592.0" layoutY="69.0" promptText="example : Beirut Rue 32" style="-fx-background-color: #c1c9e4;" />
+      <TextField fx:id="phone" layoutX="592.0" layoutY="35.0" promptText="example : 78838225" style="-fx-background-color: #c1c9e4;" />
+      <TextField fx:id="roleid" layoutX="592.0" layoutY="151.0" promptText="1 : Manager / 2 : Receptionist" style="-fx-background-color: #c1c9e4;" />
+      <Button fx:id="back" layoutX="36.0" layoutY="426.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Back" textFill="#2a1b3d">
+         <font>
+         <Font name="Agency FB Bold" size="20.0" />
+      </font>
+      </Button>
+   </children>
+</AnchorPane>

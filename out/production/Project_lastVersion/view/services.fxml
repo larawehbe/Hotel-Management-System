@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="442.0" prefWidth="676.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.services">
+   <children>
+      <Button fx:id="back" layoutX="49.0" layoutY="21.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Back" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <TableView fx:id="table" layoutX="186.0" layoutY="66.0" prefHeight="200.0" prefWidth="303.0" style="-fx-background-color: #c1c9e4;">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Service ID" />
+          <TableColumn fx:id="name" prefWidth="75.0" text="Service Name" />
+            <TableColumn fx:id="description" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="cost" prefWidth="75.0" text="Cost" />
+        </columns>
+      </TableView>
+      <Button fx:id="add" layoutX="140.0" layoutY="328.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Add" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <Button fx:id="delete" layoutX="258.0" layoutY="328.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Delete" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <Button fx:id="update" layoutX="413.0" layoutY="328.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Update" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <TextField layoutX="264.0" layoutY="283.0" promptText="Service ID" style="-fx-background-color: #c1c9e4;" />
+      <Label layoutX="167.0" layoutY="278.0" text="ID" textFill="#c1c8e4">
+          <font>
+              <Font name="Agency FB Bold" size="29.0" />
+          </font></Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="485.0" prefWidth="795.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.rooms_controller">
+   <children>
+      <TableView fx:id="table" layoutX="74.0" layoutY="110.0" prefHeight="200.0" prefWidth="597.0" style="-fx-background-color: #c1c9e4;">
+        <columns>
+          <TableColumn fx:id="roomid" prefWidth="75.0" text="Room ID" />
+          <TableColumn fx:id="rate" prefWidth="75.0" text="Rate" />
+            <TableColumn fx:id="cost" prefWidth="75.0" text="Cost" />
+            <TableColumn fx:id="status" prefWidth="75.0" text="Status" />
+            <TableColumn fx:id="features" prefWidth="75.0" text="Features" />
+            <TableColumn fx:id="beds" prefWidth="75.0" text="Beds" />
+            <TableColumn fx:id="hotelid" prefWidth="75.0" text="Hotel ID" />
+            <TableColumn fx:id="place" prefWidth="75.0" text="location" />
+        </columns>
+      </TableView>
+      <Button fx:id="back" layoutX="42.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Back" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <Button fx:id="update" layoutX="333.0" layoutY="369.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Update" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <Label layoutX="256.0" layoutY="319.0" text="ID" textFill="#c1c8e4">
+          <font>
+              <Font name="Agency FB Bold" size="29.0" />
+          </font></Label>
+      <Button fx:id="delete" layoutX="484.0" layoutY="369.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Delete" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <Button fx:id="add_room" layoutX="162.0" layoutY="369.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Add room" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <TextField fx:id="id" layoutX="371.0" layoutY="324.0" promptText="Room ID" style="-fx-background-color: #c1c9e4;" />
+   </children>
+</AnchorPane>

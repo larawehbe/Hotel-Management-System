@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="468.0" prefWidth="711.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.roles_controller">
+    <children>
+      <TableView fx:id="table" layoutX="243.0" layoutY="46.0" prefHeight="200.0" prefWidth="226.0" style="-fx-background-color: #c1c9e4;">
+        <columns>
+          <TableColumn fx:id="roleid" prefWidth="75.0" text="RoleID" />
+          <TableColumn fx:id="rolename" prefWidth="75.0" text="Role Name" />
+            <TableColumn fx:id="salary" prefWidth="75.0" text="Salary" />
+        </columns>
+      </TableView>
+      <Button fx:id="back" layoutX="36.0" layoutY="19.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Back" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <Label layoutX="217.0" layoutY="283.0" text="ID" textFill="#c1c8e4">
+          <font>
+              <Font name="Agency FB Bold" size="29.0" />
+          </font></Label>
+      <Button fx:id="add_role" layoutX="160.0" layoutY="340.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Add Role" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <Button fx:id="update" layoutX="300.0" layoutY="340.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Update" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <Button fx:id="delete" layoutX="442.0" layoutY="340.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Delete" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <TextField fx:id="id" layoutX="293.0" layoutY="288.0" promptText="Role ID" style="-fx-background-color: #c1c9e4;" />
+   </children>
+</AnchorPane>

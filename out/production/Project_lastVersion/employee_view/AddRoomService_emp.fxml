@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="509.0" prefWidth="805.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employee_controller.AddRoomService_emp">
+    <children>
+        <Button fx:id="back" layoutX="32.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Back" textFill="#2a1b3d">
+            <font>
+                <Font name="Agency FB Bold" size="20.0" />
+            </font>
+        </Button>
+      <Label layoutX="155.0" layoutY="83.0" text="Room id" textFill="#c1c8e4">
+          <font>
+              <Font name="Agency FB Bold" size="29.0" />
+          </font></Label>
+      <TextField fx:id="roomid" layoutX="262.0" layoutY="88.0" promptText="Room ID" style="-fx-background-color: #c1c9e4;" />
+      <CheckBox fx:id="ironing" layoutX="217.0" layoutY="158.0" mnemonicParsing="false" text="Ironing" textFill="#c1c8e4">
+          <font>
+              <Font name="Agency FB Bold" size="29.0" />
+          </font></CheckBox>
+      <CheckBox fx:id="rental" layoutX="217.0" layoutY="192.0" mnemonicParsing="false" text="Car Rental" textFill="#c1c8e4">
+          <font>
+              <Font name="Agency FB Bold" size="29.0" />
+          </font></CheckBox>
+      <CheckBox fx:id="clean" layoutX="217.0" layoutY="227.0" mnemonicParsing="false" text="Dry Cleaning" textFill="#c1c8e4">
+          <font>
+              <Font name="Agency FB Bold" size="29.0" />
+          </font></CheckBox>
+      <CheckBox fx:id="laundry" layoutX="217.0" layoutY="261.0" mnemonicParsing="false" text="Laundry" textFill="#c1c8e4">
+          <font>
+              <Font name="Agency FB Bold" size="29.0" />
+          </font></CheckBox>
+      <CheckBox fx:id="shoeshine" layoutX="217.0" layoutY="294.0" mnemonicParsing="false" text="Shoe Shine" textFill="#c1c8e4">
+          <font>
+              <Font name="Agency FB Bold" size="29.0" />
+          </font></CheckBox>
+      <CheckBox fx:id="valet" layoutX="217.0" layoutY="324.0" mnemonicParsing="false" text="Valet Services" textFill="#c1c8e4">
+          <font>
+              <Font name="Agency FB Bold" size="29.0" />
+          </font></CheckBox>
+      <Button fx:id="submit" layoutX="541.0" layoutY="82.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Submit" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <TextField fx:id="nb1" layoutX="489.0" layoutY="165.0" promptText="Pieces to be ironed" style="-fx-background-color: #c1c9e4;" />
+      <TextField fx:id="nb2" layoutX="489.0" layoutY="268.0" promptText="Pieces passed to laundry" style="-fx-background-color: #c1c9e4;" />
+    </children>
+</AnchorPane>

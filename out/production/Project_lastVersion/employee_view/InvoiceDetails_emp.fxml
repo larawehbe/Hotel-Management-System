@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="644.0" prefWidth="1147.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employee_controller.InvoiceDetails_emp">
+   <children>
+      <Button fx:id="checkinvoice" layoutX="629.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Check Invoice" textFill="#2a1b3d">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="cid" layoutX="185.0" layoutY="21.0" text="Customer ID" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Button fx:id="back" layoutX="38.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Back" textFill="#2a1b3d">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Button>
+      <TextField fx:id="customerid" layoutX="360.0" layoutY="27.0" promptText="Customer ID" style="-fx-background-color: #c1c9e4;" />
+      <Label layoutX="120.0" layoutY="127.0" text="Customer ID" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label layoutX="113.0" layoutY="172.0" text="Check-in Date" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label layoutX="90.0" layoutY="208.0" text="Check-out Date" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label layoutX="158.0" layoutY="244.0" text="Date" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <CheckBox fx:id="s1" layoutX="620.0" layoutY="88.0" mnemonicParsing="false" text="Ironing - 5 per piece" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="s2" layoutX="619.0" layoutY="145.0" mnemonicParsing="false" text="Car Rental - 40" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="s3" layoutX="620.0" layoutY="206.0" mnemonicParsing="false" text="Dry Cleaning - 5" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="s4" layoutX="625.0" layoutY="262.0" mnemonicParsing="false" text="Laundry - 5 per piece" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="s5" layoutX="625.0" layoutY="321.0" mnemonicParsing="false" text="Shoe Shine - 10" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="s6" layoutX="625.0" layoutY="376.0" mnemonicParsing="false" text="Valet Service - 5" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></CheckBox>
+      <Label layoutX="214.0" layoutY="103.0" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label fx:id="cid" layoutX="340.0" layoutY="127.0" text="Label" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label fx:id="indate" layoutX="340.0" layoutY="166.0" text="Label" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label fx:id="outdate" layoutX="340.0" layoutY="208.0" text="Label" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label fx:id="date" layoutX="340.0" layoutY="244.0" text="Label" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label layoutX="148.0" layoutY="287.0" text="Period" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label fx:id="period" layoutX="340.0" layoutY="287.0" text="Label" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label layoutX="136.0" layoutY="323.0" text="Room ID" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label layoutX="129.0" layoutY="358.0" text="Room cost" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label fx:id="rid" layoutX="340.0" layoutY="323.0" text="Label" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label fx:id="rc" layoutX="340.0" layoutY="358.0" text="Label" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label layoutX="101.0" layoutY="392.0" text="Total Room Cost" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label fx:id="trc" layoutX="340.0" layoutY="392.0" text="Label" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label layoutX="559.0" layoutY="432.0" text="Total Service Cost : " textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label fx:id="tsc" layoutX="878.0" layoutY="432.0" text="Label" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label layoutX="577.0" layoutY="470.0" text="TOTAL INVOICE" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label fx:id="ti" layoutX="878.0" layoutY="470.0" text="Label" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <TextField fx:id="resid" layoutX="360.0" layoutY="59.0" promptText="Reservation ID" style="-fx-background-color: #c1c9e4;" />
+      <Label layoutX="176.0" layoutY="53.0" text="Reservation ID" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

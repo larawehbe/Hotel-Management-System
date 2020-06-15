@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="489.0" prefWidth="600.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainPage">
+   <children>
+      <Pane prefHeight="165.0" prefWidth="600.0" style="-fx-background-color: #c1c8e4;">
+         <children>
+             <Label layoutX="51.0" layoutY="67.0" prefHeight="44.0" prefWidth="211.0" text="Lavender Hotel" textFill="#2a1b3d">
+                 <font>
+                     <Font name="Agency FB Bold" size="25.0" />
+                 </font>
+             </Label>
+             <ImageView fitHeight="191.0" fitWidth="243.0" layoutX="382.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                     <Image url="@4.jpeg" />
+                 </image>
+
+                   </ImageView>
+         </children>
+      </Pane>
+
+      <Button fx:id="customer" layoutX="411.0" layoutY="256.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="168.0" style="-fx-background-color: #c1c8e4;" text="         Customer" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="25.0" />
+          </font></Button>
+      <Button fx:id="receptionist" layoutX="188.0" layoutY="256.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="200.0" style="-fx-background-color: #c1c8e4;" text="         Receptionist" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="25.0" />
+          </font></Button>
+      <Button fx:id="manager" layoutX="17.0" layoutY="256.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="148.0" style="-fx-background-color: #c1c8e4;" text="     Manager" textFill="#2a1b3d">
+         <font>
+            <Font name="Agency FB BOLD" size="25.0" />
+         </font></Button>
+       <ImageView fitHeight="66.0" fitWidth="53.0" layoutX="17.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@5.jpeg" />
+           </image>
+       </ImageView>
+      <ImageView fitHeight="65.0" fitWidth="77.0" layoutX="411.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+              <Image url="@8.jpeg" />
+          </image>
+      </ImageView>
+       <ImageView fitHeight="53.0" fitWidth="182.0" layoutX="195.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@6.jpeg" />
+           </image>
+       </ImageView>
+
+
+
+   </children>
+</AnchorPane>

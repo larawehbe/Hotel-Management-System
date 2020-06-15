@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.roomType">
+   <children>
+      <Button fx:id="back" layoutX="37.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Back" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <TableView fx:id="table" layoutX="175.0" layoutY="28.0" prefHeight="200.0" prefWidth="232.0" style="-fx-background-color: #c1c9e4;">
+        <columns>
+          <TableColumn fx:id="roomtype" prefWidth="75.0" text="Type ID" />
+          <TableColumn fx:id="category" prefWidth="75.0" text="Category" />
+            <TableColumn fx:id="descr" prefWidth="75.0" text="Description" />
+        </columns>
+      </TableView>
+      <TextField fx:id="id" layoutX="261.0" layoutY="246.0" promptText="RoomType ID" style="-fx-background-color: #c1c9e4;" />
+      <Label layoutX="155.0" layoutY="241.0" text="ID" textFill="#c1c8e4">
+          <font>
+              <Font name="Agency FB Bold" size="29.0" />
+          </font></Label>
+      <Button fx:id="add" layoutX="98.0" layoutY="296.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Add" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <Button fx:id="update" layoutX="239.0" layoutY="296.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Update" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+      <Button fx:id="delete" layoutX="410.0" layoutY="296.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Delete" textFill="#2a1b3d">
+          <font>
+              <Font name="Agency FB Bold" size="20.0" />
+          </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="448.0" prefWidth="707.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="employee_controller.cust_cont">
+   <children>
+      <TableView fx:id="table" layoutX="51.0" layoutY="96.0" prefHeight="200.0" prefWidth="606.0" style="-fx-background-color: #c1c8e4;">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="Customer ID" />
+          <TableColumn fx:id="fname" prefWidth="75.0" text="First Name" />
+            <TableColumn fx:id="lname" prefWidth="75.0" text="Last Name" />
+            <TableColumn fx:id="phone" prefWidth="75.0" text="Phone" />
+            <TableColumn fx:id="city" prefWidth="75.0" text="City" />
+            <TableColumn fx:id="gender" prefWidth="75.0" text="Gender" />
+            <TableColumn fx:id="username" prefWidth="75.0" text="Username" />
+            <TableColumn fx:id="password" prefWidth="75.0" text="Password" />
+        </columns>
+      </TableView>
+      <Label layoutX="285.0" layoutY="320.0" text="ID" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <TextField fx:id="customer_id" layoutX="329.0" layoutY="325.0" promptText="Customer ID" style="-fx-background-color: #c1c9e4;" />
+      <Button fx:id="update" layoutX="295.0" layoutY="380.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Update" textFill="#2a1b3d"><font>
+          <Font name="Agency FB Bold" size="20.0" />
+      </font>
+      </Button>
+      <Button fx:id="delete" layoutX="407.0" layoutY="380.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Delete" textFill="#2a1b3d"><font>
+          <Font name="Agency FB Bold" size="20.0" />
+      </font>
+      </Button>
+      <Button fx:id="back" layoutX="52.0" layoutY="44.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: tr;" text="Back" textFill="#c1c9e4"><font>
+          <Font name="Agency FB Bold" size="20.0" />
+      </font>
+      </Button>
+      <Button fx:id="add_customer" layoutX="136.0" layoutY="380.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Add Customer" textFill="#2a1b3d"><font>
+          <Font name="Agency FB Bold" size="20.0" />
+      </font>
+      </Button>
+   </children>
+</AnchorPane>

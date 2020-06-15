@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Main_Employee">
+   <children>
+    <Pane prefHeight="125.0" prefWidth="600.0" style="-fx-background-color: #c1c8e4;">
+    <children>
+        <Label layoutX="79.0" layoutY="33.0" prefHeight="81.0" prefWidth="333.0" text="Welcome " textFill="#2a1b3d">
+            <font>
+                <Font name="Agency FB Bold" size="66.0" />
+            </font></Label>
+            <Button fx:id="logout" layoutX="489.0" layoutY="14.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="97.0" style="-fx-background-color: #c1c9e4;" text="Log Out" textFill="#2a1b3d">
+                <font>
+                    <Font name="Agency FB Bold" size="20.0" />
+                </font>
+            </Button>
+            <ImageView fitHeight="68.0" fitWidth="73.0" layoutX="395.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@6.jpeg" />
+                </image>
+            </ImageView></children></Pane>
+       <Button fx:id="invoice" layoutX="375.0" layoutY="266.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: #c1c9e4;" text="Invoice" textFill="#2a1b3d">
+           <font>
+               <Font name="Agency FB Bold" size="20.0" />
+           </font>
+       </Button>
+       <Button fx:id="roomservice" layoutX="88.0" layoutY="258.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: #c1c9e4;" text="Room Services" textFill="#2a1b3d">    <font>
+           <Font name="Agency FB Bold" size="17.0" />
+       </font></Button>
+       <Button fx:id="reservation" layoutX="375.0" layoutY="176.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: #c1c9e4;" text="Reservation" textFill="#2a1b3d"><font>
+           <Font name="Agency FB Bold" size="20.0" />
+       </font></Button>
+       <Button fx:id="customer" layoutX="88.0" layoutY="176.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="130.0" style="-fx-background-color: #c1c9e4;" text="Customer" textFill="#2a1b3d">
+           <font>
+               <Font name="Agency FB Bold" size="20.0" />
+           </font></Button>
+   </children>
+</AnchorPane>

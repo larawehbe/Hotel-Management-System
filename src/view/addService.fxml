@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="508.0" prefWidth="819.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.addService">
+   <children>
+      <Button fx:id="back" layoutX="31.0" layoutY="25.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Back" textFill="#2a1b3d">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="218.0" layoutY="140.0" text="Name" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label layoutX="175.0" layoutY="254.0" text="Description" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <Label layoutX="224.0" layoutY="193.0" text="Cost" textFill="#c1c8e4">
+         <font>
+            <Font name="Agency FB Bold" size="29.0" />
+         </font></Label>
+      <TextField fx:id="name" layoutX="414.0" layoutY="145.0" promptText="service like : car rental" style="-fx-background-color: #c1c9e4;" />
+      <TextField fx:id="cost" layoutX="414.0" layoutY="198.0" promptText="example : 12" style="-fx-background-color: #c1c9e4;" />
+      <Button fx:id="add" layoutX="710.0" layoutY="139.0" mnemonicParsing="false" style="-fx-background-color: #c1c9e4;" text="Add" textFill="#2a1b3d">
+         <font>
+            <Font name="Agency FB Bold" size="20.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="desc" layoutX="388.0" layoutY="254.0" prefHeight="200.0" prefWidth="200.0" promptText="put the specific featurs that makes this service critical" style="-fx-background-color: #c1c9e4;" />
+   </children>
+</AnchorPane>
